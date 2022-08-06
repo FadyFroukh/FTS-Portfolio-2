@@ -1,0 +1,576 @@
+/* General Settings */
+:root{
+    --bg-color:#fef9ef;
+    --text-color:#0b090a;
+    --header-color:#535c68;
+    --text-color-reverse:#fef9ef;
+}
+[data-theme="dark"] {
+    --bg-color:#0b090a;
+    --text-color:#fef9ef;
+    --header-color:#fef9ef;
+    --text-color-reverse:#0b090a;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins" , sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+#main-header .logo , #hidden-menu .logo {
+    color: var(--text-color);
+}
+input:focus{
+    outline: none;
+    border-bottom: 2.5px solid #ccc !important;
+}
+
+textarea{
+    resize: none;
+    background-color: inherit;
+    color: inherit;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: 2.5px solid #ccc !important;
+}
+
+.submit-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: inherit;
+    color: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    min-width: 120px;
+}
+
+
+/* End of General Settings */
+
+/* Header Part */
+
+#main-header{
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px var(--text-color);
+    height: 10vh;
+}
+.btn{
+    cursor: pointer;
+    color: var(--text-color);
+}
+#main-header #stack-btn{
+    display: none;
+}
+.logo{
+    font-family: 'Cedarville Cursive', cursive;
+}
+#hidden-menu{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--bg-color);
+    display: none;
+}
+#hidden-menu .hidden-header{
+    padding: 10px 20px;
+    height: 10vh;
+}
+#hidden-menu .hidden-menu-items {
+    height: 90vh;
+}
+.hidden-menu-items ul {
+    list-style: none;
+    text-align: center;
+}
+.hidden-menu-items ul li {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* End of Header Part */
+
+/* Main Part */
+
+main {
+    min-height: 90vh;
+}
+main .main-wrapper{
+    min-height: 90vh;
+}
+main .main-wrapper > div{
+    width: 100%;
+}
+.main-wrapper > div:first-of-type{
+    text-align: end;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.main-wrapper > div:last-of-type{
+    text-align: start;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.main-wrapper figure{
+    width: 100%;
+    height: 100%;
+}
+.main-wrapper figure img{
+    width: 100%;
+    height: 100%;
+}
+.main-hidden{
+    font-size: 2rem;
+    font-weight: bold;
+    display: none !important;
+}
+
+/* End of Main Part */
+
+/* Work Part */
+#work {
+    display: flex;
+    flex-direction: column;
+}
+#work .pics{
+    flex-direction: column;
+    width: 100%;
+}
+#work figure img {
+    height: 90%;
+}
+#work .pics section{
+    width: 100%;
+}
+#work .pics section figure{
+    width:100%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.pics section figure img{
+    width:100%;
+    object-fit: cover;
+}
+section figure .work-overlay{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0);
+}
+section figure .work-icons{
+    padding: 20px;
+    justify-content: flex-start;
+}
+section figure .work-icons span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.work-icons .share-button{
+    background-color: #fff;
+    padding: 5px;
+}
+#first-pic{
+    height: 450px;
+}
+#second-pic {
+    height: 450px;
+}
+#third-pic{
+    height: 600px;
+}
+#fourth-pic {
+    height: 450px;
+}
+#fifth-pic {
+    height: 450px;
+}
+/* End of Work Part */
+
+/* About Part */
+
+#about {
+    flex-direction: column;
+}
+#about .about-parts{
+    min-height: 400px;
+}
+#about .about-parts > *{
+    width: 100%;
+}
+.about-parts {
+    width: 100%;
+}
+.about-parts > *{
+    width: 100%;
+}
+.about-parts .about-text{
+    flex-direction: column;
+    margin-right: 20px;
+}
+.about-parts .about-text section{
+    width: 100%;
+}
+.about-parts .about-text section h3 , .about-parts .about-text section p {
+    margin-bottom: 12px;
+}
+.about-parts a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+#about fieldset{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#about .about-pic{
+    min-height: 400px;
+    width: 100%;
+    flex-direction: column;
+}
+#about .about-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+/* End of About Part */
+
+/* Contact Part */
+#contact{
+    flex-direction: column;
+}
+#contact .contact-parts {
+    min-height: 400px;
+}
+#contact .contact-parts > form {
+    flex: 2;
+}
+#contact .contact-parts > aside{
+    flex: 1;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 30px;
+}
+.contact-parts > aside > .contact-method{
+    min-height: 70px;
+}
+.contact-parts > aside > .contact-method h4{
+    margin-bottom: 10px;
+}
+.contact-parts > aside  .contact-icons span{
+    margin-right: 12px;
+}
+
+/* End of Contact Part */
+
+/* Playground Part */
+#play{
+    min-height: 500px;
+}
+#play h2 , #play p , #play button {
+    margin: 10px 0;
+}
+.car-div{
+    min-height: 80px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.car {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0%;
+    animation: carMove 10s ease-in-out 1s 1;
+    background-color: #fef9ef;
+    padding: 10px;
+    clip-path: circle(50%);
+}
+
+/* End of Playground Part */
+
+/* Footer Part */
+footer{
+    min-height: 400px;
+    padding: 15px;
+}
+.footer-section {
+    width: 100%;
+    flex-direction: column;
+}
+footer .footer-parts > p{
+    margin: 10px 0;
+    font-size: 2rem;
+}
+/* End of Footer Part */
+
+@keyframes carMove {
+    0%{
+        left: 0%;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+        transform: rotateY(180deg);
+    }
+}
+
+/* End of Playground Part */
+
+/* Framework */
+.wrapper{
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.flex-center{
+    align-items: center;
+}
+.flex-item-center{
+    justify-content: center;
+    align-items: center;
+}
+.clear-list{
+    display: flex;
+    list-style: none;
+}
+.clear-list > li {
+    margin-left: 12px;
+}
+.text-center{
+    text-align: center;
+}
+.h2{
+    margin: 15px 0;
+    font-size: 3rem;
+}
+.h3{
+    margin: 12px 0;
+    font-size: 2rem;
+}
+.h4{
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+.form-section{
+    margin: 10px 0;
+}
+.form-div{
+    flex-direction: column;
+    width: 100%;
+}
+.form-div:first-of-type {
+    margin-right: 25px;
+}
+.form-div > input , .form-div > label {
+    margin: 8px 0;
+}
+.form-div > input{
+    padding: 7.5px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    background-color: inherit;
+    color: inherit;
+}
+/* Media Queries */
+
+@media screen and (max-width:576px) {
+    #main-header .list-btn , #main-header #theme-btn{
+        display: none;
+    }
+    #main-header #stack-btn{
+        display: inline-flex;
+    }
+    .main-hidden{
+        display: flex !important;
+    }
+    .main-wrapper > div:first-of-type{
+        display: none;
+    }
+    .main-wrapper > div:last-of-type{
+        display: none;
+    }
+    .wrapper{
+        width: 350px;
+    }
+    #work .pics section{
+        flex-direction: column;
+    }
+    #work .pics section figure{
+        margin-right: 0;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    #work .pics section figure img{
+        height: 400px;
+    }
+    .about-parts{
+        flex-direction: column;
+    }
+    #about fieldset p {
+        flex-direction: column;
+        line-height: 1.75;
+    }
+    .contact-parts{
+        flex-direction: column;
+    }
+    .form-section{
+        flex-direction: column;
+    }
+    .contact-parts  aside {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
+    }
+    footer .wrapper{
+        flex-direction: column;
+    }
+    .h2{
+        font-size: 2rem;
+    }
+    .h3{
+        font-size: 1.35rem;
+    }
+    .h4{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:577px) and  (max-width:767px) {
+    #main-header .list-btn , #main-header #theme-btn{
+        display: none;
+    }
+    #main-header #stack-btn{
+        display: flex;
+    }
+    .main-hidden{
+        display: flex !important;
+    }
+    .main-wrapper > div:first-of-type{
+        display: none;
+    }
+    .main-wrapper > div:last-of-type{
+        display: none;
+    }
+    .wrapper{
+        width: 537px;
+    }
+    #work .pics section{
+        flex-direction: column;
+    }
+    #work .pics section figure{
+        margin-right: 0;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    #work .pics section figure img{
+        height: 400px;
+    }
+    .about-parts{
+        flex-direction: column;
+    }
+    .contact-parts{
+        flex-direction: column;
+    }
+    .form-section{
+        flex-direction: column;
+    }
+    .contact-parts  aside {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
+    }
+    footer .wrapper{
+        flex-direction: column;
+    }
+    .h2{
+        font-size: 2.25rem;
+    }
+    .h3{
+        font-size: 1.75rem;
+    }
+    .h4{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    #main-header .list-btn , #main-header #theme-btn{
+        display: none;
+    }
+    #main-header #stack-btn{
+        display: inline-flex;
+    }
+    .main-hidden{
+        display: flex !important;
+    }
+    .main-wrapper > div:first-of-type{
+        display: none;
+    }
+    .main-wrapper > div:last-of-type{
+        display: none;
+    }
+    .wrapper{
+        width: 738px;
+    }
+    #work .pics section{
+        flex-direction: column;
+    }
+    #work .pics section figure{
+        margin-right: 0;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    #work .pics section figure img{
+        height: 400px;
+    }
+    .about-parts{
+        flex-direction: column;
+    }
+    footer .wrapper{
+        flex-direction: column;
+    }
+    .h2{
+        font-size: 2.5rem;
+    }
+    .h3{
+        font-size: 2rem;
+    }
+    .h4{
+        font-size: 1.75rem;
+    }
+}
+
+/* End of Framework */
